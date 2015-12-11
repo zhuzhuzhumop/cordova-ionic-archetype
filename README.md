@@ -110,7 +110,7 @@ Maven的配置文件，我们采用多配置(Multiple Profiles)的方式，自�
 具体使用参见《运行业务项目/检查种子质量》《发布业务项目/收获》章节
 
 ####README.md
-项目自描述文件，采用Markdown的语法，记录项目 **基因**
+项目自描述文件，采用Markdown的语法，记录项目**基因**
 
 此时生成的业务项目是一个 **完整可运行**的Cordova项目。下面我们介绍如何运行这个业务项目
 ###运行业务项目 - 检查种子质量
@@ -127,7 +127,7 @@ mvn package -P init-platforms
 ```
 
 ####运行项目
-开发阶段我们推荐使用模拟器运行项目，没有问题后在安装到设备。
+开发阶段我们推荐使用模拟器运行项目，没有问题后再安装到设备。
 众所周知Android的模拟器启动异常缓慢，iOS的模拟器需要苹果电脑，而我们的项目使用Web技术栈开发移动应用，所以我们基于浏览器的模拟器[Apache Ripple](http://ripple.incubator.apache.org)
 >Apache Ripple™ is a web based mobile environment simulator designed to enable rapid development of mobile web applications for various web application frameworks, such as Apache Cordova™ and BlackBerry® WebWorks™. 
 >It can be paired with current web based mobile development workflows to decrease time spent developing and testing on real devices and/or simulators.
