@@ -116,7 +116,9 @@ Maven的配置文件，我们采用多配置(Multiple Profiles)的方式，自�
 ###运行业务项目 - 检查种子质量
 ####添加平台和插件
 上文我们介绍了手工命令来安装平台和插件，这里我们推荐Maven Plugin的方式来执行。
-我们的多配置中**init-platforms**和**init-plugins**分别用于安装平台和插件，只需勾选执行即可。
+我们的多配置中**init-platforms**和**init-plugins**分别用于安装平台和插件，只需勾选执行即可。 
+![Maven执行项目初始化](http://zhoujianhui.bitbucket.org/maven-archetype/cordova-ionic-archetype-init.png)   
+
 当然也可以通过Maven命令执行:
 ```
 mvn package -P init-platforms
@@ -124,6 +126,10 @@ mvn package -P init-platforms
 值得一提的是我们在用Hook的方式在安装完平台后自动安装插件，配置见config.xml:
 ```xml
 <hook type="after_platform_add" src="hooks/after-platform-add.js"/>
+```
+添加平台后，如果安装新的插件，可在**init/init-config.json**中配置插件信息，然后执行：
+```
+mvn package -P init-plugins
 ```
 
 ####运行项目
